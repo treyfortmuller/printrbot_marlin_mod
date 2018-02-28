@@ -2,7 +2,7 @@
 3D printer firmware from the Marlin open source project modified for an upgraded Printrbot Simple Metal 3D printer.
 
 ### Link to Arduino IDE version
-A preconfigured Arduino IDE (1.0.4 for Mac OS) required to compile the firmware is available <a href="https://drive.google.com/drive/folders/1u2KzetefOUAhrINv0e1jWAKOGpmWxzT0?usp=sharing">here</a>, as provided by <a href="http://www.printrbottalk.com/wiki/index.php?title=User:PxT">PxT</a>.
+A preconfigured Arduino IDE (1.0.4 for Mac OS) required to compile the firmware is available <a href="https://drive.google.com/drive/folders/1u2KzetefOUAhrINv0e1jWAKOGpmWxzT0?usp=sharing" target="_blank">here</a>, as provided by <a href="http://www.printrbottalk.com/wiki/index.php?title=User:PxT" target="_blank">PxT</a>.
 
 ### Linux based dfu-programmer for flashing
 
