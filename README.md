@@ -1,7 +1,17 @@
 # Marlin Firmware for Modified Printrbot Simple
 3D printer firmware from the Marlin open source project modified for an upgraded Printrbot Simple Metal 3D printer.
 
----
+### Link to Arduino IDE version
+
+### Linux based dfu-programmer for flashing
+
+### References
+
+### Set-up Guide
+* Compiling a .hex file
+* Flashing with dfu-programmer
+* PID autotune
+* Testing
 
 ### Implemented G Codes:
 
@@ -51,7 +61,7 @@
 *  M106 - Fan on
 *  M107 - Fan off
 *  M109 - Sxxx Wait for extruder current temp to reach target temp. Waits only when heating
-*         Rxxx Wait for extruder current temp to reach target temp. Waits when heating and cooling
+*  M109 - Rxxx Wait for extruder current temp to reach target temp. Waits when heating and cooling
 *  M114 - Output current position to serial port
 *  M115 - Capabilities string
 *  M117 - display message
@@ -62,7 +72,7 @@
 *  M129 - EtoP Closed (BariCUDA EtoP = electricity to air pressure transducer by jmil)
 *  M140 - Set bed target temp
 *  M190 - Sxxx Wait for bed current temp to reach target temp. Waits only when heating
-*         Rxxx Wait for bed current temp to reach target temp. Waits when heating and cooling
+*  M190 - Rxxx Wait for bed current temp to reach target temp. Waits when heating and cooling
 *  M200 - Set filament diameter
 *  M201 - Set max acceleration in units/s^2 for print moves (M201 X1000 Y1000)
 *  M202 - Set max acceleration in units/s^2 for travel moves (M202 X1000 Y1000) Unused in Marlin!!
