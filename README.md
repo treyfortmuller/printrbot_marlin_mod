@@ -9,10 +9,24 @@ A preconfigured Arduino IDE (1.0.4 for Mac OS) required to compile the firmware 
 ### References
 
 ### Set-up Guide
-* Compiling a .hex file
-* Flashing with dfu-programmer
-* PID autotune
-* Testing
+#### Compiling a .hex file
+
+#### Flashing with dfu-programmer (For Linux)
+* Install dfu-programmer: 'sudo apt-get install dfu-programmer'
+* Compile your firmware as usual with the arduino IDE. (just "verify"don't upload)
+* Arduino will create a hex file within a temporary directory listed in the output
+* Power and connect printrboard
+* Get the printrboard into boot mode (for a rev. F board, add the boot pins)
+* Press the reset button
+* 'lsusb' (should say 'Atmel Corp. at90usb AVR DFU bootloader') if lsusb says 'VOTI' you're not in bootloader mode
+* 'sudo dfu-programmer at90usb1286 erase'
+* 'sudo dfu-programmer at90usb1286 flash {path to the hex file in the /tmp}' (e.g. sudo dfu-programmer at90usb1286 flash /tmp/build7750901060806024229.tmp/Repetier.cpp.hex)
+* Exit boot mode by removing (for rev. F boards) the boot jumper and press the reset button
+* 'lsusb' should say 'VOTI'
+* Connect with your host software and test if the changes have been applied
+
+#### PID autotune
+#### Testing
 
 ### Implemented G Codes:
 
