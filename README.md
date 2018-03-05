@@ -29,9 +29,11 @@ A preconfigured Arduino IDE (1.0.4 for Mac OS) required to compile the firmware 
 
 #### PID autotune
 #### G Code for 8mm Lead Screw Upgrade
-`M92 Z400
-M500
-M501`
+`M92 Z400`
+
+`M500`
+
+`M501`
 
 ## Implemented G Codes:
 
