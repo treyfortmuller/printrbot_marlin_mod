@@ -1,34 +1,36 @@
 # Marlin Firmware for Modified Printrbot Simple
 3D printer firmware from the Marlin open source project modified for an upgraded Printrbot Simple Metal 3D printer.
 
-### Link to Arduino IDE version
+## Link to Arduino IDE version
 A preconfigured Arduino IDE (1.0.4 for Mac OS) required to compile the firmware is available <a target="_blank" href="https://drive.google.com/drive/folders/1u2KzetefOUAhrINv0e1jWAKOGpmWxzT0?usp=sharing">here</a>, as provided by <a target="_blank" href="http://www.printrbottalk.com/wiki/index.php?title=User:PxT">PxT</a>.
 
-### Linux based dfu-programmer for flashing
+## Linux based dfu-programmer for flashing
+`sudo apt-get install dfu-programmer`
 
-### References
+## References
+* [Printrboard Rep Rap Wiki Page](http://reprap.org/wiki/Printrboard)
 
-### Set-up Guide
+## Set-up Guide
 #### Compiling a .hex file
 
 #### Flashing with dfu-programmer (For Linux)
-* Install dfu-programmer: 'sudo apt-get install dfu-programmer'
-* Compile your firmware as usual with the arduino IDE. (just "verify"don't upload)
+* Install dfu-programmer: `sudo apt-get install dfu-programmer`
+* Compile your firmware as usual with the arduino IDE. (just "verify," don't upload)
 * Arduino will create a hex file within a temporary directory listed in the output
 * Power and connect printrboard
 * Get the printrboard into boot mode (for a rev. F board, add the boot pins)
 * Press the reset button
-* 'lsusb' (should say 'Atmel Corp. at90usb AVR DFU bootloader') if lsusb says 'VOTI' you're not in bootloader mode
-* 'sudo dfu-programmer at90usb1286 erase'
-* 'sudo dfu-programmer at90usb1286 flash {path to the hex file in the /tmp}' (e.g. sudo dfu-programmer at90usb1286 flash /tmp/build7750901060806024229.tmp/Repetier.cpp.hex)
+* `lsusb` (should say `Atmel Corp. at90usb AVR DFU bootloader`) if lsusb says `VOTI` you're not in bootloader mode
+* `sudo dfu-programmer at90usb1286 erase`
+* `sudo dfu-programmer at90usb1286 flash {path to the hex file in the /tmp}` (e.g. `sudo dfu-programmer at90usb1286 flash /tmp/build7750901060806024229.tmp/Repetier.cpp.hex`)
 * Exit boot mode by removing (for rev. F boards) the boot jumper and press the reset button
-* 'lsusb' should say 'VOTI'
+* `lsusb` should show `VOTI`
 * Connect with your host software and test if the changes have been applied
 
 #### PID autotune
 #### Testing
 
-### Implemented G Codes:
+## Implemented G Codes:
 
 *  G0  -> G1
 *  G1  - Coordinated Movement X Y Z E
@@ -44,7 +46,7 @@ A preconfigured Arduino IDE (1.0.4 for Mac OS) required to compile the firmware 
 *  G91 - Use Relative Coordinates
 *  G92 - Set current position to cordinates given
 
-### M Codes
+## M Codes
 
 *  M0   - Unconditional stop - Wait for user to press a button on the LCD (Only if ULTRA_LCD is enabled)
 *  M1   - Same as M0
