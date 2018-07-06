@@ -12,11 +12,11 @@ A preconfigured Arduino IDE (1.0.4 for Mac OS) required to compile the firmware 
 
 ## Set-up Guide
 #### Compiling a .hex file
+* Compile your firmware as usual with the arduino IDE (v1.0.4 from the above link). (just "verify," don't upload)
+* Arduino will create a hex file within a temporary directory listed in the output
 
 #### Flashing with dfu-programmer (For Linux)
 * Install dfu-programmer: `sudo apt-get install dfu-programmer`
-* Compile your firmware as usual with the arduino IDE. (just "verify," don't upload)
-* Arduino will create a hex file within a temporary directory listed in the output
 * Power and connect printrboard
 * Get the printrboard into boot mode (for a rev. F board, add the boot pins)
 * Press the reset button
@@ -27,13 +27,14 @@ A preconfigured Arduino IDE (1.0.4 for Mac OS) required to compile the firmware 
 * `lsusb` should show `VOTI`
 * Connect with your host software and test if the changes have been applied
 
-#### PID autotune
-#### G Code for 8mm Lead Screw Upgrade
-`M92 Z400`
+#### G Code for Bed Size and 8mm Lead Screw Upgrade
+`M92 X80 Y80 Z400 E94.5`
 
-`M500`
+`M211 X150 Y150 Z150`
 
-`M501`
+`M500 // save parameters`
+
+`M501 // confirm parameters`
 
 ## Implemented G Codes:
 

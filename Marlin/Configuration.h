@@ -292,7 +292,7 @@ const bool E_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 // ENDSTOP SETTINGS:
 // Sets direction of endstops when homing; 1=MAX, -1=MIN
 #define X_HOME_DIR -1
-#define Y_HOME_DIR -1
+#define Y_HOME_DIR 1
 #if defined(PB_MCF)
   #define Z_HOME_DIR 1
 #elif defined(PB_BOCUSINI)
