@@ -127,6 +127,8 @@ A preconfigured Arduino IDE (1.0.4 for Mac OS) required to compile the firmware 
 *  M600 - Pause for filament change X[pos] Y[pos] Z[relative lift] E[initial retract] L[later retract distance for removal]
 *  M907 - Set digital trimpot motor current using axis codes.
 *  M908 - Control digital trimpot directly.
+*  M909 - Displays current POT current settings.
+*  M910 - Saves the POT current settings.
 *  M350 - Set microstepping mode.
 *  M351 - Toggle MS1 MS2 pins directly.
 *  M928 - Start SD logging (M928 filename.g) - ended by M29
